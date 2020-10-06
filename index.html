@@ -17,7 +17,11 @@
 		<button id="takepic" class="close-image"><img src="imgs/webcam.png"></button>
 		<button id="switch" class="close-image"><img src="imgs/switch.png"></button>
 	</div>
-	<canvas id="canvas" width="640" height="480"></canvas>
+
+	<section>
+		<canvas id="canvas" width="640" height="480">
+			
+		</canvas>
 
 
 <script type="text/javascript">
@@ -26,15 +30,18 @@
     navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
         video.srcObject = stream;
         video.play();
+        
     });
 }
-
+	
 	var canvas = document.getElementById('canvas');
 	var context = canvas.getContext('2d');
 	var video = document.getElementById('video');
 
 	document.getElementById("takepic").addEventListener("click", function() {
 	context.drawImage(video, 0, 0, 640, 480);
+	
+
 });	
 </script>
 
