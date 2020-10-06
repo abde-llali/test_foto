@@ -21,6 +21,7 @@ button {
 
 video{
     margin: 0px 0px 0px 370px;
+    box-shadow: 8px 5px 24px 7px #175e96;
 }
 
 span{
@@ -31,7 +32,7 @@ span{
 h1{
     font-family: sans-serif;
     font-size: xxx-large;
-    color: #22afff;
+    color: #fccd04;
     margin: 7px 120px 0px 615px;
 }
 
@@ -50,6 +51,25 @@ button {
     font: 400 13.3333px Arial;
 }
 
+body {
+    display: block;
+    margin: 8px;
+    background-image: url("imgs/background.jpg")
+}
+
 canvas{
     width: 150px;
+}
+
+/*navbar*/
+
+ul {
+  list-style-type: none;
+    margin: -8px;
+    padding: 0px 27px;
+    background-color: #143358;
+}
+
+li {
+  display: inline;
 }
