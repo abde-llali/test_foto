@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Test Stage </title>
+<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+</head>
+<body>
+<ul>
+  <li><img src="imgs/logo.png"></li>
+</ul>
+<span>
+<h1> Test Stage </h1>
+
+	<video id="video" width="640" height="480"  autoplay></video>
+	<div class="btn">
+		<button id="takepic" class="close-image"><img src="imgs/webcam.png"></button>
+		<button id="switch" class="close-image"><img src="imgs/switch.png"></button>
+	</div>
+
+	<section>
+		<canvas id="canvas" width="640" height="480">
+			
+		</canvas>
+
+
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        video.srcObject = stream;
+        video.play();
+        
+    });
+}
+	
+	var canvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d');
+	var video = document.getElementById('video');
+
+	document.getElementById("takepic").addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+	
+
+});	
+</script>
+
+
+
+</span>
+
+</body> 
+</html>
